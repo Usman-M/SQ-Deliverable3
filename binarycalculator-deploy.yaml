@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: binarycalculator-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: binarycalculator
+  template:
+    metadata:
+      labels:
+        app: binarycalculator
+    spec:
+      containers:
+        - image: gcr.io/stellar-verve-379700/binarycalculator:latest
+          name: binarycalculator
+          ports:
+            - containerPort: 8080
+              name: binarycalculator
