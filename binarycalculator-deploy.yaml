@@ -13,8 +13,7 @@ spec:
         app: binarycalculator
     spec:
       containers:
-        - image: gcr.io/stellar-verve-379700/binarycalculator:latest
+        - image: gcr.io/stellar-verve-379700/binarycalculator
           name: binarycalculator
           ports:
-            - containerPort: 8080
-              name: binarycalculator
+            - containerPort: 3306
