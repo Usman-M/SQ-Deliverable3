@@ -71,7 +71,7 @@ public class BinaryControllerTest {
     public void noOperator() throws Exception {
         this.mvc.perform(post("/").param("operand1","1").param("operator","").param("operand2","1"))
             .andExpect(status().isOk())
-            .andExpect(view().name("Error"));
+            .andExpect(view().name("error"));
     }
 
     @Test
